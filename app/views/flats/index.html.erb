@@ -1,0 +1,13 @@
+  <h1>Simple Airbnb</h1>
+<div class="container">
+  <h1> <%= "All our flats ({#@size})" %></h1>
+  <% @flats.each do |flat| %>
+  <%= link_to flat_path(flat) do %>
+  <h2><%= flat.name %></h2>
+  <p><%= flat.address %></p>
+  <p class="btn btn-primary"><%= link_to "Add a flat", new_flat_path(flat) %></p>
+  <% end %>
+  <hr>
+  <% end %>
+</div>
+</div>
